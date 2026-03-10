@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clothing Network</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="top-nav">
+        <ul class="nav-links">
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#projects">PROJECTS</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+        </ul>
+    </nav>
+    <main>
+        <!-- Home Section based on reference pic -->
+        <section id="home" class="hero-section">
+            <div class="hero-container">
+                <h1 class="hero-heading">
+                    <div class="hello-text">HELLO,</div>
+                    <div class="im-text">I'M</div>
+                    <div class="name-text">Lismon Poulose</div>
+                </h1>
+                <div class="hero-bottom-grid">
+                    <div class="what-we-do">
+                        <p>I partner with brands to create casual, graphic, and sportswear
+                            collections that blend style, comfort, and contemporary culture. I enjoy working with teams
+                            who care about strong concepts, clean execution, and design that resonates with real people.
+                        </p>
+                    </div>
+                    <div class="stamp-container">
+                        <svg class="circular-stamp" viewBox="0 0 100 100">
+                            <path id="circlePath" d="M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0"
+                                fill="transparent" />
+                            <text>
+                                <textPath href="#circlePath" startOffset="0%">
+                                    FASHION GRAPHIC DESIGNER • FASHION GRAPHIC DESIGNER •
+                                </textPath>
+                            </text>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="marquee-strip">
+            <div class="marquee-track">
+                <span>LISMON POULOSE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FASHION DESIGNER
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LISMON POULOSE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FASHION
+                    DESIGNER &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+                <span>LISMON POULOSE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FASHION DESIGNER
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LISMON POULOSE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FASHION
+                    DESIGNER &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+            </div>
+        </div>
+
+        <section id="about" class="white-text-section">
+            <div class="white-text-container">
+                <p>I have over 15 years of experience collaborating with high-street brands, retailers, and suppliers
+                    across multi-product categories. From initial concept to pre-production, I oversee the full
+                    development process with a strong focus on technical fabrics, precision fit, and quality
+                    construction.<br>If you’re planning to launch a brand or elevate your next collection, I’d
+                    welcome the opportunity to discuss how I can support your vision.</p>
+            </div>
+        </section>
+
+        <div class="proximity-line-container">
+            <div class="proximity-line"></div>
+        </div>
+
+        <section class="stats-section">
+            <div class="stats-row">
+                <div class="stat">PROJECTS-<span class="stat-num">120</span></div>
+                <div class="stat">CLIENTS-<span class="stat-num">095</span></div>
+            </div>
+        </section>
+
+        <!-- PROJECTS PAGE -->
+        <section id="projects" class="page">
+            <h2 class="page-title">PROJECTS</h2>
+            <div class="projects-grid" id="projectsGrid">
+                <!-- Javascript will populate this section dynamically from data.js -->
+            </div>
+        </section>
+
+        <!-- CONTACT PAGE -->
+        <section id="contact" class="page">
+            <h2 class="contact-header">
+                <span style="color: #ffffff;">CONTACT</span> <span style="color: #EED690;">LISMON POULOSE</span>
+            </h2>
+
+            <div class="custom-contact-container">
+                <form class="custom-contact-form">
+                    <div class="form-row">
+                        <div class="input-group">
+                            <label>FIRST NAME</label>
+                            <input type="text">
+                        </div>
+                        <div class="input-group">
+                            <label>LAST NAME</label>
+                            <input type="text">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="input-group">
+                            <label>PHONE</label>
+                            <input type="text">
+                        </div>
+                        <div class="input-group">
+                            <label>EMAIL</label>
+                            <input type="email">
+                        </div>
+                    </div>
+
+                    <div class="form-row header-message">
+                        <div class="input-group message-group">
+                            <label>MESSAGE</label>
+                            <textarea rows="1"></textarea>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="submit-btn" onclick="event.preventDefault();">SUBMIT</button>
+                </form>
+            </div>
+
+            <h1 class="get-in-touch-text">GET IN TOUCH</h1>
+        </section>
+    </main>
+
+    <div id="projectModal" class="project-modal">
+        <div class="modal-header">
+            <h2 id="modalTitle">Project Title</h2>
+            <button class="close-modal" id="closeModalBtn">&times;</button>
+        </div>
+        <div class="modal-gallery" id="modalGallery">
+            <!-- Dynamically populated images go here -->
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
