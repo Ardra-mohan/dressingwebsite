@@ -1,49 +1,42 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const pages = document.querySelectorAll('.page');
     const navLinks = document.querySelectorAll('.nav-links a');
+    const pageViews = document.querySelectorAll('.page-view');
 
-    // Observer options
-    const observerOptions = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.5 // Trigger when 50% of the section is visible
-    };
+    // Click handler for SPA feeling
+    navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
 
-    // Observer callback
-    const observerCallback = (entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                // Get the id of the intersecting section
-                const activeId = entry.target.getAttribute('id');
+            // Remove active from all nav links
+            navLinks.forEach(l => l.classList.remove('active'));
+            // Add active to clicked link
+            link.classList.add('active');
 
-                const sidebarSig = document.getElementById('sidebar-signature');
-                if (sidebarSig) {
-                    if (activeId !== 'home') {
-                        sidebarSig.classList.add('show');
-                    } else {
-                        sidebarSig.classList.remove('show');
-                    }
-                }
+            // Hide all page views
+            pageViews.forEach(view => {
+                view.classList.remove('active-view');
+            });
 
-                // Remove active class from all links
-                navLinks.forEach(link => {
-                    link.classList.remove('active');
-                    // Add active class to corresponding link
-                    if (link.getAttribute('href') === `#${activeId}`) {
-                        link.classList.add('active');
-                    }
-                });
+            // Show target page view
+            const targetId = link.getAttribute('data-target');
+            const targetView = document.getElementById(targetId + '-view');
+            if (targetView) {
+                targetView.classList.add('active-view');
+                window.scrollTo(0, 0); // Scroll to top when changing views
+                // Update URL hash without causing scroll jumps
+                history.pushState(null, null, `#${targetId}`);
             }
         });
-    };
-
-    // Create the observer
-    const observer = new IntersectionObserver(observerCallback, observerOptions);
-
-    // Observe all pages
-    pages.forEach(page => {
-        observer.observe(page);
     });
+
+    // Check hash on load to open correct tab
+    const initialHash = window.location.hash.replace('#', '');
+    if (initialHash) {
+        const initialLink = document.querySelector(`.nav-links a[data-target="${initialHash}"]`);
+        if (initialLink) {
+            initialLink.click();
+        }
+    }
 
     // Handle smooth transition of profile name style on scroll
     const profileName = document.getElementById('profile-name');
