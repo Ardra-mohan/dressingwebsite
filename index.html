@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -23,8 +23,8 @@
             <section id="home" class="hero-section">
                 <div class="hero-container">
                     <h1 class="hero-heading">
-                        <div class="hello-text">HELLO,</div>
-                        <div class="im-text">I'M</div>
+                        <div class="hello-text">Hello,</div>
+                        <div class="im-text">I'm</div>
                         <div class="name-text">Lismon Poulose</div>
                     </h1>
                     <div class="hero-bottom-grid">
@@ -41,8 +41,9 @@
                                 <path id="circlePath" d="M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0"
                                     fill="transparent" />
                                 <text>
-                                    <textPath href="#circlePath" startOffset="0%">
-                                        FASHION GRAPHIC DESIGNER • FASHION GRAPHIC DESIGNER •
+                                    <textPath href="#circlePath" startOffset="0%" textLength="220">
+                                        GRAPHIC &nbsp;&nbsp;&nbsp; DESIGNER &nbsp;&nbsp;&nbsp; FASHION
+                                        &nbsp;&nbsp;&nbsp; •
                                     </textPath>
                                 </text>
                             </svg>
@@ -54,21 +55,24 @@
             <div class="marquee-strip">
                 <div class="marquee-track">
                     <span>LISMON POULOSE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FASHION DESIGNER
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LISMON POULOSE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FASHION
-                        DESIGNER &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Trend and Market Research &nbsp;&nbsp;|&nbsp;&nbsp; Mood
+                        Board and Range plan &nbsp;&nbsp;|&nbsp;&nbsp; Design and Development &nbsp;&nbsp;|&nbsp;&nbsp;
+                        Tech Packs &nbsp;&nbsp;|&nbsp;&nbsp; Fabric Selection &nbsp;&nbsp;|&nbsp;&nbsp; Production
+                        Support &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
                     <span>LISMON POULOSE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FASHION DESIGNER
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LISMON POULOSE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FASHION
-                        DESIGNER &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Trend and Market Research &nbsp;&nbsp;|&nbsp;&nbsp; Mood
+                        Board and Range plan &nbsp;&nbsp;|&nbsp;&nbsp; Design and Development &nbsp;&nbsp;|&nbsp;&nbsp;
+                        Tech Packs &nbsp;&nbsp;|&nbsp;&nbsp; Fabric Selection &nbsp;&nbsp;|&nbsp;&nbsp; Production
+                        Support &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
                 </div>
             </div>
 
             <section id="about" class="white-text-section">
                 <div class="white-text-container">
                     <p>I have over 15 years of experience collaborating with high-street brands, retailers, and
-                        suppliers
-                        across multi-product categories. From initial concept to pre-production, I oversee the full
-                        development process with a strong focus on technical fabrics, precision fit, and quality
-                        construction.<br>If you’re planning to launch a brand or elevate your next collection, I’d
+                        suppliers across multi-product categories. From initial concept to pre-production, I oversee the
+                        full development process with a strong focus on technical fabrics, precision fit, and quality
+                        construction.<br><br>If you’re planning to launch a brand or elevate your next collection, I’d
                         welcome the opportunity to discuss how I can support your vision.</p>
                 </div>
             </section>
@@ -99,41 +103,46 @@
         <div id="contact-view" class="page-view">
             <section id="contact" class="page">
                 <h2 class="contact-header">
-                    <span style="color: #ffffff;">CONTACT</span> <span style="color: #EED690;">LISMON POULOSE</span>
+                    <span style="color: #ffffff;">CONTACT</span> <span style="color: #FFD2A6;">LISMON POULOSE</span>
                 </h2>
 
                 <div class="custom-contact-container">
-                    <form class="custom-contact-form">
+                    <form class="custom-contact-form" action="https://formsubmit.co/ardramohan03@gmail.com"
+                        method="POST">
+                        <!-- Disables default captcha page to make it smoother -->
+                        <input type="hidden" name="_captcha" value="false">
+                        <!-- Sets a custom subject for the email -->
+                        <input type="hidden" name="_subject" value="New Website Contact Form Submission!">
                         <div class="form-row">
                             <div class="input-group">
                                 <label>FIRST NAME</label>
-                                <input type="text">
+                                <input type="text" name="First_Name" required>
                             </div>
                             <div class="input-group">
                                 <label>LAST NAME</label>
-                                <input type="text">
+                                <input type="text" name="Last_Name" required>
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="input-group">
                                 <label>PHONE</label>
-                                <input type="text">
+                                <input type="text" name="Phone">
                             </div>
                             <div class="input-group">
                                 <label>EMAIL</label>
-                                <input type="email">
+                                <input type="email" name="Email" required>
                             </div>
                         </div>
 
                         <div class="form-row header-message">
                             <div class="input-group message-group">
                                 <label>MESSAGE</label>
-                                <textarea rows="1"></textarea>
+                                <textarea rows="1" name="Message" required></textarea>
                             </div>
                         </div>
 
-                        <button type="submit" class="submit-btn" onclick="event.preventDefault();">SUBMIT</button>
+                        <button type="submit" class="submit-btn">SUBMIT</button>
                     </form>
                 </div>
 
