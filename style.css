@@ -572,7 +572,8 @@ main {
 
 .submit-btn:hover {
     background-color: #FF8C00;
-    box-shadow: 0 0 15px rgba(255, 140, 0, 0.4);
+    box-shadow: 0 10px 25px rgba(255, 140, 0, 0.6);
+    transform: translateY(-5px) scale(1.05);
 }
 
 .get-in-touch-text {
